@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/ic_dashboard"
+        android:icon="@drawable/ic_dashboard_preto_24dp"
+        android:title="Dashboard"/>
+
+    <item android:id="@+id/ic_clientes"
+        android:icon="@drawable/ic_clientes_preto_24dp"
+        android:title="Clientes"/>
+
+    <item android:id="@+id/ic_notificacao"
+        android:icon="@drawable/ic_notificacao_preto_24dp"
+        android:title="Notificação"/>
+
+    <item android:id="@+id/ic_suporte"
+        android:icon="@drawable/ic_suporte_preto_24dp"
+        android:title="Suporte"/>
+</menu>

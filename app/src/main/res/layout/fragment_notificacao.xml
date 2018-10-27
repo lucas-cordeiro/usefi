@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/FundoBrancoEscuro"
+    tools:context=".fragment.NotificacaoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:padding="16dp"
+                    app:cardBackgroundColor="@color/colorAzul"
+                    app:cardCornerRadius="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_notificacao" />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Enviar Notificação"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/txtInfoNotificacaoComerciante"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+                <TextView
+                    android:id="@+id/txtInfoNotificacaoComerciante"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Para adicionar informações do Usuário utilize tags no meio do texto. Tags disponíveis:"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorStandard"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/txtTermosDeUsoSuporte"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    app:cardBackgroundColor="@color/colorAzul"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btnEnviar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtMensagem">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imgButtonImageNotificacao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/colorStandard"
+                            android:src="@drawable/ic_banner"
+                            tools:layout_editor_absoluteX="16dp"
+                            tools:layout_editor_absoluteY="415dp" />
+
+                        <TextView
+                            android:id="@+id/txtImagemNotificacao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:text="Imagem de Anexo"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            tools:layout_editor_absoluteX="346dp"
+                            tools:layout_editor_absoluteY="427dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <Button
+                    android:id="@+id/btnEnviar"
+                    style="@android:style/Widget.Material.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/borda_colorida2"
+                    android:text="Enviar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView8" />
+
+                <EditText
+                    android:id="@+id/edtTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/borda_colorida2"
+                    android:ems="10"
+                    android:hint="Título"
+                    android:inputType="textAutoCorrect|textAutoComplete|textMultiLine|textPersonName"
+                    android:padding="14dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorStandard"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:layout_constraintBottom_toTopOf="@+id/edtMensagem"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIdadeClienteNotificacao" />
+
+                <EditText
+                    android:id="@+id/edtMensagem"
+                    style="@style/FullWidthEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/borda_colorida2"
+                    android:ems="10"
+                    android:hint="Ex: Olá :Nome:, promoção imperdível!"
+                    android:inputType="textAutoCorrect|textAutoComplete|textMultiLine|textPersonName"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorStandard"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:layout_constraintBottom_toTopOf="@+id/cardView8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtTitle" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarNotificacaoComerciante"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnEnviar"
+                    app:layout_constraintEnd_toEndOf="@+id/btnEnviar"
+                    app:layout_constraintStart_toStartOf="@+id/btnEnviar"
+                    app:layout_constraintTop_toTopOf="@+id/btnEnviar" />
+
+                <TextView
+                    android:id="@+id/txtIdadeClienteNotificacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/borda_colorida2"
+                    android:padding="12dp"
+                    android:text=":Idade:"
+                    android:textColor="@color/colorAzul"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/edtTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtNomeClienteNotificao"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInfoNotificacaoComerciante" />
+
+                <TextView
+                    android:id="@+id/txtNomeClienteNotificao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/borda_colorida2"
+                    android:padding="12dp"
+                    android:text=":Nome:"
+                    android:textColor="@color/colorAzul"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/txtIdadeClienteNotificacao"
+                    app:layout_constraintEnd_toStartOf="@+id/txtIdadeClienteNotificacao"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

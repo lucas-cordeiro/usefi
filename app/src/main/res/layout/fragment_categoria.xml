@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CategoriaFragment">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/scrollCategoria"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewCategoria"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <com.github.clans.fab.FloatingActionButton xmlns:fab="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/fabLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:elevation="1dp"
+                            android:foregroundTint="@android:color/white"
+                            android:src="@drawable/ic_left_blue"
+                            android:visibility="invisible"
+                            fab:fab_colorNormal="@color/colorTransparente"
+                            fab:fab_colorPressed="@color/colorTransparentePressed"
+                            fab:fab_colorRipple="@color/colorTransparenteRipple" />
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cardPaginaCategoria"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="4dp"
+                            android:visibility="invisible"
+                            app:cardBackgroundColor="@color/colorTransparente"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="1dp">
+
+                            <TextView
+                                android:id="@+id/txtPaginaCategoria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@color/colorAzul"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+                        </android.support.v7.widget.CardView>
+
+                        <com.github.clans.fab.FloatingActionButton xmlns:fab="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/fabRigth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:elevation="1dp"
+                            android:foregroundTint="@android:color/white"
+                            android:src="@drawable/ic_right_blue"
+                            android:visibility="invisible"
+                            fab:fab_colorNormal="@color/colorTransparente"
+                            fab:fab_colorPressed="@color/colorTransparentePressed"
+                            fab:fab_colorRipple="@color/colorTransparenteRipple" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabConectarWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:foregroundTint="@android:color/white"
+                android:src="@drawable/ic_wifi_24dp"
+                app:fab_colorNormal="@color/colorAzul"
+                app:fab_colorPressed="@color/colorAzulPressed"
+                app:fab_colorRipple="@color/colorAzulRipple"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabFiltro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:foregroundTint="@android:color/white"
+                android:src="@drawable/ic_search_white_24dp"
+                app:fab_colorNormal="@color/colorAzul"
+                app:fab_colorPressed="@color/colorAzulPressed"
+                app:fab_colorRipple="@color/colorAzulRipple"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBarFabConectar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/fabConectarWifi"
+                app:layout_constraintEnd_toEndOf="@+id/fabConectarWifi" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_categorias"
+            android:title="Categorias" />
+        <item
+            android:id="@+id/nav_mais_visitados"
+            android:title="Mais Visitados" />
+        <item
+            android:id="@+id/nav_visitados_recentemente"
+            android:title="Visitados Recentemente" />
+        <item
+            android:id="@+id/nav_promocoes"
+            android:title="Promoções" />
+        <item
+            android:id="@+id/nav_proximo"
+            android:title="Próximo a você" />
+    </group>
+
+</menu>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "386641153788",
+    "firebase_url": "https://usefi-46465.firebaseio.com",
+    "project_id": "usefi-46465",
+    "storage_bucket": "usefi-46465.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386641153788:android:d418219bbded6960",
+        "android_client_info": {
+          "package_name": "loureiro.enzo.usefi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386641153788-vqmhdhf3c3d4lhka6ug8c1vd435el75r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "loureiro.enzo.usefi",
+            "certificate_hash": "ce96836c2292988970a4fde0406589779b5c5daa"
+          }
+        },
+        {
+          "client_id": "386641153788-0g6qt309ms2jeba8dht5uu4h0ks0fpin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC76BN_KTVbTma3lB0ndztqhiCglSuRWEI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386641153788-0g6qt309ms2jeba8dht5uu4h0ks0fpin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

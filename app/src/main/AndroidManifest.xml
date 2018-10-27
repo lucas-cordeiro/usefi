@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="loureiro.enzo.usefi">
+
+    <!-- Permissões -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.EscolhaLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompat.TelaCheia">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.PerfilActivity" />
+        <activity
+            android:name=".activity.UsuarioActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_usuario" />
+
+        <receiver
+            android:name=".broadcast.ConexaoWifiBroadcast"
+            android:process=":remote" >
+        </receiver>
+
+        <service android:name=".service.ConexaoWifi" android:exported="false"/>
+
+        <receiver
+            android:name=".broadcast.ExcluirWifiBroadcast"
+            android:process=":remote" >
+        </receiver>
+
+
+        <!--Excluir Todos[Início]-->
+
+        <receiver
+            android:name=".broadcast.ExcluirTodosWifiBroadcast">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".service.ExcluirTodoWifiService$ExcluirTodosWifiBroadCastService"
+            android:process=":remote" >
+        </receiver>
+
+        <!--Excluir Todos[Fim]-->
+
+        <receiver
+            android:name=".service.ExcluirWifiService$ExcluirWifiBroadCastService"
+            android:process=":remote" >
+        </receiver>
+
+        <service android:name=".service.VerificarConexaoWifi"
+            android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
+
+        <receiver
+            android:name=".service.VerificarConexaoWifi$ExcluirTodosWifiBroadCastService"
+            android:process=":remote" >
+        </receiver>
+
+        <receiver android:name=".broadcast.BaixarRedes"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="BAIXAR_REDES"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.ExcluirWifiService" android:exported="false"/>
+
+        <!--
+        <receiver android:name="loureiro.enzo.usefi.broadcast.VerificarWifiOff">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>-->
+
+        <service
+            android:name=".service.JobConexaoWifi"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".broadcast.DataAtualDashboardBroadcast"/>
+
+        <!-- [NOTIFICACAO INICIO] -->
+        <service android:name=".service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.ExcluirTodoWifiService" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notificacao_preto_24dp" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <!-- [NOTIFICACAO FIM] -->
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+    </application>
+
+</manifest>
